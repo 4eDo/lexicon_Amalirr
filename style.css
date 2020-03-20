@@ -1,0 +1,282 @@
+body{
+				background-color: rgba(200,200,200,0.9);
+			}
+
+			table {
+				width: 98%;
+				border-collapse: collapse;
+				font-family: Verdana, serif;
+				font-size: 13px;
+				background-color: rgba(250,250,250,0.9);
+			}
+
+			td, th {
+				border: 1px solid rgba(0,0,0,0.8);
+				padding: 3px 7px 2px 7px;
+			}
+			th {
+				text-align: left;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.8);
+				color: #fff;
+			}
+
+			/*tr:nth-child(odd) { background-color: rgba(0,0,0,0.2);}*/
+			tr:hover {
+				background: rgba(0,0,0,0.5);
+				border: 1px solid rgba(0,0,0,0.8);/* Цвет фона при наведении */
+			}
+
+			.cont{
+				margin: 5% 15% 10% 15%;
+				border-radius: 20px;
+				background-color: rgba(250,250,250,0.9);
+			}
+
+			.cont2{
+				padding: 20px;
+				text-align: center;
+			}
+
+			input{
+				width: 90%;
+				cursor: pointer;
+			}
+			.one{
+				width: 50%;
+				text-align: left;
+			}
+			.two{
+				width: 50%;
+				text-align: right;
+			}
+
+			.table_sort table {
+				width: 98%;
+				border-collapse: collapse;
+				font-family: Verdana, serif;
+				font-size: 13px;
+				background-color: rgba(250,250,250,0.9);
+			}
+
+			.table_sort th {
+				cursor: pointer;
+				padding: 5px;
+				background-color: rgba(0,0,0,0.8);
+				color: #fff;
+				text-align: center;
+			}
+
+			.table_sort td,
+			.table_sort th {
+				border: 1px solid rgba(0,0,0,0.8);
+			}
+
+			.table_sort tbody tr:nth-child(even) {
+				background-color: rgba(0,0,0,0.2);
+			}
+			.table_sort tbody tr:hover:nth-child(even) {
+				background: rgba(0,0,0,0.5);
+				border: 1px solid rgba(0,0,0,0.8);
+			}
+			.table_sort tr:hover {
+				background: rgba(0,0,0,0.5);
+				border: 1px solid rgba(0,0,0,0.8);/* Цвет фона при наведении */
+			}
+			th.sorted[data-order="1"],
+			th.sorted[data-order="-1"] {
+				position: relative;
+			}
+
+			th.sorted[data-order="1"]::after,
+			th.sorted[data-order="-1"]::after {
+				right: 8px;
+				position: absolute;
+			}
+
+			th.sorted[data-order="-1"]::after {
+				content: "▼"
+			}
+
+			th.sorted[data-order="1"]::after {
+				content: "▲"
+			}
+
+			.table_sort tr[visible='false'],
+			.no-result {
+				display: none;
+			}
+			.table_sort tr[visible='true'] {
+				display: table-row;
+			}
+			.searchCount {
+				padding: 8px;
+				color: #000000;
+			}
+		.tooltip {
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip .tooltiptext {
+			visibility: hidden;
+			width: 140px;
+			background-color: #555;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px;
+			position: absolute;
+			z-index: 1;
+			bottom: 150%;
+			left: 50%;
+			margin-left: -75px;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		.tooltip .tooltiptext::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #555 transparent transparent transparent;
+		}
+
+		.tooltip:hover .tooltiptext {
+			visibility: visible;
+			opacity: 1;
+		}
+		
+
+/* Оформление панели */
+#side-checkbox {
+    display: none;
+}
+.side-panel {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: -360px;
+    background: rgba(0,0,0,0.8);
+    transition: all 0.5s;   
+    width: 320px;
+    height: 100vh;
+    box-shadow: 10px 0 20px rgba(0,0,0,0.4);
+    color: #FFF;
+    padding: 20px 20px;
+}
+.side-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #BFE2FF;
+}
+/* Оформление кнопки на странице */
+.side-button-1-wr {
+    text-align: center; /* Контейнер для кнопки, чтобы было удобнее ее разместить */
+}
+.side-button-1 .side-b {
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: rgba(0,0,0,0.8);
+    cursor: pointer; 
+    border: 2px solid #BFE2FF;
+}
+.side-button-1 .side-b:hover,
+.side-button-1 .side-b:active,
+.side-button-1 .side-b:focus {
+    color: #FFF;
+}
+.side-button-1 .side-b:after,
+.side-button-1 .side-b:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.side-button-1 .side-open:after,
+.side-button-1 .side-open:before {
+    background: rgba(0,255,0,0.2);
+}
+.side-button-1 .side-close:after,
+.side-button-1 .side-close:before {
+    background: rgba(255,0,0,0.2);
+}
+.side-button-1 .side-b:before {
+    top: -6px;
+}
+.side-button-1 .side-b:hover:after,
+.side-button-1 .side-b:hover:before {
+    width: 100%;
+    left: 0;
+}
+/* Переключатели кнопки 1 */
+.side-button-1 .side-close {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-open {
+    display: none;
+}
+#side-checkbox:checked + .side-panel + .side-button-1-wr .side-button-1 .side-close {
+    display: block;
+}
+#side-checkbox:checked + .side-panel {
+    left: 0;
+}
+/* Оформление кнопки на панеле */
+.side-button-2 {
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: rgba(0,0,0,0.8);    
+    transition: all 280ms ease-in-out;    
+}
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);    
+    color: #FFF;
+}
+
+a.bot8 {
+  background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+        border-radius: 4px;
+    color: #555555;
+    display:block;
+        width:120px;
+        margin: 20px auto;
+    font-size: 14px;
+        text-align:center;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    vertical-align: middle;
+        text-decoration:none;
+}
+a.bot8:hover, a.bot8:focus {
+   border-color: rgba(82, 168, 236, 0.8);
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+   outline: 0 none;
+}
