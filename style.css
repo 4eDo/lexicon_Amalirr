@@ -263,9 +263,9 @@ a.bot8 {
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
         border-radius: 4px;
     color: #555555;
-    display:block;
+    display:inline-block;
         width:120px;
-        margin: 20px auto;
+        margin: 10px auto;
     font-size: 14px;
         text-align:center;
     height: 20px;
