@@ -263,17 +263,17 @@ a.bot8 {
     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
         border-radius: 4px;
     color: #555555;
-    display:inline-block;
+    display: inline-block;
         width:118px;
         margin: 10px auto;
     font-size: 14px;
-        text-align:center;
+        text-align: center;
     height: 20px;
     line-height: 20px;
     margin-bottom: 10px;
     padding: 4px 6px;
     vertical-align: middle;
-        text-decoration:none;
+        text-decoration: none;
 }
 a.bot8:hover, a.bot8:focus {
    border-color: rgba(82, 168, 236, 0.8);
